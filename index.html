@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andres Ruiz | portafolio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <h1>Andres Ruiz</h1>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+     <section class="hero">
+        <h2 class="title2">Desarrollador web en formación</h2>
+        <img src="img/foto portafolio.jpg" alt="Foto de Andres ruiz" class="hero-img">
+        <p>construyendo interfaces modernas y funcionales</p>
+     </section>
+     <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p> Profesional multilingüe con experiencia en atención al cliente y selección de talento humano, 
+      actualmente en formación como desarrollador web. Me interesa crear 
+      interfaces claras, funcionales y centradas en el usuario.</p>
+     </section>
+    
+     <section id="proyectos" class="proyectos">
+        <h2>Proyectos</h2>
+        
+        <div class="grid-proyectos"> 
+
+            <h3>portafolio personal</h3>
+            <p>mi primer proyecto web donde aplico HTML y CSS para crear una página moderna y responsive.</p>
+            <span>HTML | CSS</span>
+
+            <div class="acciones">
+                <a href="#" class="btn">Ver código</a>
+                <a href="#" class="btn btn-secundario">Ver demo</a>
+            </div>
+        </div>
+
+        <div class="proyecto">
+            <h3>Tarjetas con Flexbox</h3>
+            <p>Diseño de tarjetas responsivas utilizando flexbox para organizar contenido dinámico.</p>
+            <span>HTML | CSS (Flexbox)</span>
+            
+        </div>
+        <div class="proyecto">
+            <h3>Próximo proyecto</h3>
+            <p>Actualmente trabajando en nuevos proyectos para seguir mejorando mis habilidades.</p>
+            <span class="badge-progreso">En progreso</span>
+        </div>
+
+        
+
+        <!-- Aquí irás agregando más proyectos -->
+
+
+     </section>
+
+     <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS (Flexbox)</li>
+            <li>Git & GitHub</li>
+            <li>Responsive design</li>
+        </ul>
+
+     </section>
+
+     <!--tabla para mostrar información estructurada-->
+     <section class="tabla-skills">
+        <h2>Skills técnicas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tecnologías</th>
+                    <th>Nivel 1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Básico - Intermedio</td>
+                </tr>
+                <tr>
+                    <td>Git</td>
+                    <td>Básico</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Básico</td>
+                </tr>
+            </tbody>
+        </table>
+
+     </section>
+
+    
+    
+     <section id="contacto" class="contacto">
+        
+        <h2>Contacto</h2>
+        
+        <div class="info-contacto">
+            <p>Email: andelipe.95@gmail.com</p>
+            <p>GitHub: github.com/andelipe95-stack</p>
+            <p>linkedin: www.linkedin.com/in/andres-ruiz-galvis-3360481b6</p>
+        </div>
+
+                                                                                      <!--creamos formulario--> 
+
+        <form class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        
+     </section>
+    </main>
+    <footer class="footer">
+        <p>Andrés Ruiz  © 2026</p>
+
+    </footer>
+
+
+
+
+
+    
+    
+</body>
+</html>

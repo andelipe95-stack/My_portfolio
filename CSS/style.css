@@ -1,0 +1,285 @@
+/*vamos a definir variables globales para mejorar colores */
+:root {
+--color-principal: #1a5276;
+--color-secundario: #7f8c8d;
+--color-fondo: #f4f6f7;
+--color-texto: #333;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+.header {
+    background: white;
+    padding: 16px 32px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--color-principal);
+    color: white;
+}
+.hero h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color:var(--color-fondo);
+    
+}
+section { 
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #1a5276;
+}
+.proyecto {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid#ddd;
+
+}
+.proyecto span {
+    font-size: 0.8rem;
+    color: #666;
+
+}
+
+.skills ul {
+    list-style: none;
+    display:flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.skills li {
+    background: #1a5276;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.contacto  p {
+    margin-bottom: 10px;
+
+}
+.badge-progreso {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f39c12;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    animation: pulse 1.5s infinite;
+
+}
+.acciones {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        
+    }
+    .btn {
+        text-decoration: none;
+        background: var(--color-secundario);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        transition: background 0.2s ease;
+    }
+    .btn:hover {
+        background: #154360;
+
+    }
+    .btn-secundario {
+        background: var(--color-secundario);
+    }
+    .btn-secundario:hover {
+        background: #626567;
+    }
+    .info-contacto{
+        margin-bottom: 20px;
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 400px;
+        
+    }
+
+      <!--Pseudo-clase-->
+    .formulario input:focus,
+    .formulario textarea:focus {
+        outline: none;
+        border-color: var(--color-principal);
+    }   
+    .formulario label {
+        font-weight: bold;
+    }
+    .info-contacto {
+        margin-bottom:  40px;
+    }
+    .formulario button {
+        background: var(--color-principal);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .formulario button:hover {
+        background: #154360;
+    }
+    table { 
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border:1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+
+    }
+    th {
+        background: var(--color-principal);
+        color: white;
+    }
+    /*primer proyecto Selectores avanzados*/
+    .proyecto:first-child {
+        border: 2px solid var(--color-principal);
+    }
+
+    /* ultimo proyecto*/
+    .proyecto:last-child {
+        opacity: 0.8;
+    }
+/*todos excepto el primero*/
+.proyecto:not(:first-child) {
+    background: #fafafa;
+}
+
+/*Pseudo-elemento*/
+section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--color-principal);
+    margin-top: 5px;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    margin-top: 40px;
+}
+
+
+
+    @keyframes pulse {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+
+    }
+     
+
+
+}
+
+/* agregamos media query (el if de CSS) para adaptar el proyecto a tamaño móvil, esto evita
+ que Navbar no se rompa, el texto tenga mejor 
+ tamaño y que el formulario no se desborde
+*/
+
+@media (max-width: 768px) {
+    /*Navbar*/
+    .header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-proyectos {
+        flex-direction: column;
+    }
+    .skills ul {
+        justify-content: center;
+    }
+    .formulario {
+        max-width: 100%;
+    }
+}
+
+.hero-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid white;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header a:hover {
+    color: var(--color-principal);
+}
+a,
+button {
+    transition: all 0.2s ease;
+}
+
+
+
