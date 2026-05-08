@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form id="formulario" method="get">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+            <small class="error" id="errorNombre"></small>
+
+            <label>email:</label>
+            <input type="email"name="email"id="email">
+            <small class="error" id="errorEmail"></small>
+            
+
+            <p>Quiero recibir informacion sobre</p>
+            
+            <div class="grupo-checkbox">
+             <label></label><input type="checkbox" name="intereses[]" value="acciones">Acciones formativas</label>
+             <label></label><input type="checkbox" name="intereses[]" value="certificados">Certificados de profesionalidad</label>
+             <label></label><input type="checkbox" name="intereses[]" value="ciclos">Ciclos formativos de formacion profesional</label>
+            </div>
+
+            <small class="error" id="errorIntereses"></small>
+            <div class="politica">
+            <label>
+                <input type="checkbox" name="politica"value="1"> Acepto la politica de privacidad
+             </label>
+            </div>
+            <small class="error" id="errorPolitica"></small>
+            <button type="submit">Enviar</button>
+
+
+        </form>
+    </div>
+
+    <script src="validacion.js" ></script>
+    <form action="procesar.php" method="post">
+
+
+   
+
+    
+</body>
+</html>
