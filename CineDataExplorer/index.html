@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineData Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <h1>MovieTime</h1>
+            <p>Discover movies, countries and trends</p>
+        </div>
+        <button id="themeToggle">
+            🌙
+        </button>
+
+        
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Discover Movies</h2>
+            
+            <input
+             id="searchInput"
+             type="text"
+             placeholder="Search movie..."
+             autocomplete="on"
+             
+             >
+        </section>
+        
+        <section class="content">
+            <section class="movies-section">
+                <div id="moviesGrid" class="movies-grid">                                      
+
+                </div>
+
+            </section>
+
+            <aside class="stats-section">
+                
+                <h3>Production countries</h3>
+
+                <div id="map"></div>
+
+                <div class="chart-placeholder">
+
+                    <h3>Genres</h3>
+
+                    <canvas id="genreChart"></canvas>
+                    
+                    
+                
+
+                </div>
+                
+            </aside>
+
+            
+        </section>
+
+        
+
+
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="js/main.js"></script>
+
+    
+</body>
+</html>
